@@ -27,7 +27,6 @@ public class TodoModifyController extends HttpServlet {
 
         try {
             TodoDTO todoDTO = todoService.get(tno);
-            log.info("여여 : " + todoDTO);
             req.setAttribute("dto", todoDTO);
             req.getRequestDispatcher("/WEB-INF/todo/modify.jsp").forward(req, resp);
         } catch (Exception e) {
